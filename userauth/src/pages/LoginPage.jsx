@@ -3,11 +3,14 @@ import mortgagedashlogo from '../assets/mortgagedashlogo.png';
 
 export default function MortgageDash() {
   return (
-    <div className="flex items-center justify-center min-h-screen bg-white relative">
-      <div className="absolute left-0 top-0 h-full w-1/4 bg-gray-900 rounded-br-full"></div>
-      <div className="absolute right-0 top-0 h-full w-1/4 bg-gray-900 rounded-bl-full"></div>
+    <div className="relative flex items-center justify-center min-h-screen bg-white overflow-hidden">
+      {/* Backdrop Arrow */}
+      <div className="absolute inset-0 flex justify-center">
+        <div className="w-0 h-0 border-t-[60vh] border-t-transparent border-b-[60vh] border-b-black border-l-[100vw] border-l-transparent" />
+      </div>
 
       <div className="relative z-10 flex flex-col items-center text-center p-10">
+        {/* Mortgage Dash Logo */}
         <img 
           src={mortgagedashlogo} 
           alt="Mortgage Dash Logo" 
@@ -17,8 +20,9 @@ export default function MortgageDash() {
         <p className="font-bold mb-auto text-xl text-gray-600">
           Pre-Qualify Clients <span className="bg-gradient-to-r from-green-600 to-green-950 text-transparent bg-clip-text">with ease</span>
         </p>
-        <button className="btn btn-accent py-4 px-8 text-lg font-semibold rounded-full shadow-lg transition-transform duration-300 hover:scale-105 flex items-center justify-center h-12">
-          <span className="flex text-white items-center justify-center h-full b-10">Get Started</span>
+
+        <button className="btn btn-primary text-white text-lg font-semibold rounded-full shadow-lg transition-transform duration-300 hover:scale-105">
+          Get Started
         </button>
       </div>
     </div>
